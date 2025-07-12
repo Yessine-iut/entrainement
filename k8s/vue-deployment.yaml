@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: vue
-        image: vue-kube
-        imagePullPolicy: Never        # 👈 AJOUT IMPORTANT
+        image: belthield/vue-kube:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 ---
