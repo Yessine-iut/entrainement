@@ -12,12 +12,14 @@ spec:
       labels:
         app: vue
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
-      - name: vue
-        image: belthield/vue-kube:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
+        - name: vue
+          image: belthield/vue-kube:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
